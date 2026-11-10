@@ -1,0 +1,149 @@
+PASS - project file exists: CMakeLists.txt
+PASS - project file exists: src/CMakeLists.txt
+PASS - project file exists: platformio.ini
+PASS - project file exists: wokwi.toml
+PASS - project file exists: README.md
+PASS - diagram JSON parses
+PASS - Wokwi config targets PlatformIO firmware artifacts
+PASS - root CMake loads the standalone ESP-IDF application
+PASS - ESP-IDF source component declares its driver and system dependencies
+PASS - C/C++ IntelliSense uses the project compile database, not stale host paths
+PASS - sdkconfig flash size matches the 4MB esp32dev board
+PASS - sdkconfig.esp32dev flash size matches the 4MB esp32dev board
+PASS - one ESP32 board is present
+PASS - entry RFID reader present
+PASS - exit RFID reader present
+PASS - both Blue Card UIDs match an authorized firmware UID
+PASS - required diagram part exists: pir1
+PASS - required diagram part exists: pir2
+PASS - required diagram part exists: sd1
+PASS - required diagram part exists: rtc1
+PASS - required diagram part exists: egress
+PASS - required diagram part exists: admin_lcd
+PASS - required diagram part exists: admin_keypad
+PASS - required diagram part exists: keypad_expander
+PASS - required diagram part exists: emergency_alarm
+PASS - required diagram part exists: led1
+PASS - required diagram part exists: led2
+PASS - required diagram part exists: led3
+PASS - required diagram part exists: led4
+PASS - required diagram part exists: r1
+PASS - required diagram part exists: r2
+PASS - required diagram part exists: r3
+PASS - required diagram part exists: r4
+PASS - four LED indicators have their intended colors
+PASS - wiring entry_rfid:SDA <-> esp:32
+PASS - wiring exit_rfid:SDA <-> esp:33
+PASS - wiring entry_rfid:SCK <-> esp:18
+PASS - wiring exit_rfid:SCK <-> esp:18
+PASS - wiring entry_rfid:MISO <-> esp:19
+PASS - wiring exit_rfid:MISO <-> esp:19
+PASS - wiring entry_rfid:MOSI <-> esp:23
+PASS - wiring exit_rfid:MOSI <-> esp:23
+PASS - wiring esp:2 <-> r1:1
+PASS - wiring esp:4 <-> r2:1
+PASS - wiring esp:16 <-> r3:1
+PASS - wiring esp:17 <-> r4:1
+PASS - wiring pir1:VCC <-> esp:3V3
+PASS - wiring pir1:GND <-> esp:GND.1
+PASS - wiring pir1:OUT <-> esp:27
+PASS - wiring pir2:VCC <-> esp:3V3
+PASS - wiring pir2:GND <-> esp:GND.1
+PASS - wiring pir2:OUT <-> esp:26
+PASS - wiring esp:18 <-> sd1:SCK
+PASS - wiring esp:19 <-> sd1:DO
+PASS - wiring esp:23 <-> sd1:DI
+PASS - wiring esp:5 <-> sd1:CS
+PASS - wiring sd1:VCC <-> esp:3V3
+PASS - wiring sd1:GND <-> esp:GND.1
+PASS - wiring esp:21 <-> rtc1:SDA
+PASS - wiring esp:22 <-> rtc1:SCL
+PASS - wiring rtc1:5V <-> esp:5V
+PASS - wiring rtc1:GND <-> esp:GND.1
+PASS - wiring admin_lcd:VCC <-> esp:3V3
+PASS - wiring admin_lcd:GND <-> esp:GND.1
+PASS - wiring admin_lcd:SDA <-> esp:21
+PASS - wiring admin_lcd:SCL <-> esp:22
+PASS - wiring keypad_expander:SDA <-> esp:21
+PASS - wiring keypad_expander:SCL <-> esp:22
+PASS - wiring admin_keypad:R1 <-> keypad_expander:GPA0
+PASS - wiring admin_keypad:R2 <-> keypad_expander:GPA1
+PASS - wiring admin_keypad:R3 <-> keypad_expander:GPA2
+PASS - wiring admin_keypad:R4 <-> keypad_expander:GPA3
+PASS - wiring admin_keypad:C1 <-> keypad_expander:GPA4
+PASS - wiring admin_keypad:C2 <-> keypad_expander:GPA5
+PASS - wiring admin_keypad:C3 <-> keypad_expander:GPA6
+PASS - wiring admin_keypad:C4 <-> keypad_expander:GPA7
+PASS - wiring emergency_alarm:1 <-> esp:GND.2
+PASS - wiring emergency_alarm:2 <-> esp:15
+PASS - wiring esp:25 <-> egress:1.l
+PASS - wiring egress:2.l <-> esp:GND.1
+PASS - wiring servo_entry:PWM <-> esp:13
+PASS - wiring servo_entry:V+ <-> esp:5V
+PASS - wiring servo_entry:GND <-> esp:GND.1
+PASS - wiring servo_exit:PWM <-> esp:14
+PASS - wiring servo_exit:V+ <-> esp:5V
+PASS - wiring servo_exit:GND <-> esp:GND.1
+PASS - wiring entry_rfid:3.3V <-> esp:3V3
+PASS - wiring entry_rfid:GND <-> esp:GND.1
+PASS - wiring exit_rfid:3.3V <-> esp:3V3
+PASS - wiring exit_rfid:GND <-> esp:GND.1
+PASS - wiring r1:2 <-> led1:A
+PASS - wiring led1:C <-> esp:GND.2
+PASS - wiring r2:2 <-> led2:A
+PASS - wiring led2:C <-> esp:GND.2
+PASS - wiring r3:2 <-> led3:A
+PASS - wiring led3:C <-> esp:GND.2
+PASS - wiring r4:2 <-> led4:A
+PASS - wiring led4:C <-> esp:GND.2
+PASS - MCP23017 Wokwi custom-chip dependency is pinned
+PASS - both RFID readers initialized
+PASS - custom RC522 driver checks SPI transaction results
+PASS - custom RC522 driver performs REQA and UID anticollision
+PASS - one RFID polling task serializes both readers on the SPI mutex
+PASS - both RFID readers initialize before polling starts
+PASS - console-simulated scans share the RFID bus mutex
+PASS - SD log reads use the shared SPI mutex
+PASS - both RFID chip-select lines are set inactive
+PASS - SD chip-select is also held inactive before card startup
+PASS - SD mounts before RFID reader startup
+PASS - entry and exit ready messages are exposed
+PASS - RFID UID event is printed to terminal
+PASS - empty RFID polls are treated as expected timeouts
+PASS - empty RC522 FIFO is treated as no-card timeout
+PASS - RFID SPI failures are reported once per reader until recovery
+PASS - granted and denied outcomes are printed
+PASS - schedule supports overnight windows
+PASS - access state is mutex protected
+PASS - NVS and SD logging exist
+PASS - PIR light auto-off hold is present
+PASS - emergency egress bypass remains present
+PASS - admin panel shares the RTC I2C bus
+PASS - LCD row updates are batched into two I2C transfers
+PASS - keypad uses two-sample debounce at a responsive polling interval
+PASS - keypad expander configures row outputs and column pull-ups
+PASS - keypad PIN login uses the shared administrator authentication
+PASS - keypad admin menu updates schedule and demo clock
+PASS - emergency egress remains independent of the admin panel
+PASS - emergency alarm uses a pulsed LEDC buzzer output
+PASS - emergency button activates alarm and release deactivates it
+PASS - occupancy capacity uses one shared 64-person setting
+PASS - failed administrator PINs trigger a 30-second shared lockout
+PASS - console help does not disclose the configured PIN
+PASS - LCD shows access outcome and reason
+PASS - LCD warns within the configured closing window
+PASS - entry and exit servos use GPIO13 and GPIO14
+PASS - room terminals publish status through a FreeRTOS queue
+PASS - room task startup and online/offline status are exposed
+PASS - room-terminal queue creation failure is reported
+PASS - old 16-person NVS snapshots migrate to the 64-person format
+PASS - occupant NVS save and commit errors are reported
+PASS - room queue and task startup failures are reported
+PASS - named contributor sections remain in chronological order
+PASS - servo and shared door-output helpers are grouped with egress work
+PASS - C source braces balanced
+PASS - C source parentheses balanced
+PASS - C source brackets balanced
+
+Static checks: 146/146 passed.
+NOTE: This is static validation only. It does not compile the firmware or execute a Wokwi simulation.

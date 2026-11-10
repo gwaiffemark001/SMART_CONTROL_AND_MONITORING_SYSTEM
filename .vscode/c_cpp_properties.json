@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-IDF coursework",
+            "compileCommands": "${workspaceFolder}/.pio/build/esp32dev/compile_commands.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
